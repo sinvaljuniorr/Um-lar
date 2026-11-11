@@ -1,0 +1,499 @@
+/* Cores e fontes usadas no site */
+:root {
+  --verde-escuro: #254f43;
+  --verde-suave: #789b83;
+  --creme: #f5f1e8;
+  --laranja: #e99a58;
+  --grafite: #333a36;
+  --branco: #ffffff;
+}
+
+/* Regras gerais */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--creme);
+  color: var(--grafite);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho e navegação */
+.cabecalho {
+  background: var(--branco);
+  border-bottom: 1px solid #e5e2da;
+}
+
+.cabecalho-conteudo {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: var(--verde-escuro);
+  font-size: 23px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 14px;
+}
+
+nav a:hover,
+.link:hover {
+  color: var(--verde-suave);
+}
+
+.botao {
+  display: inline-block;
+  padding: 11px 18px;
+  background: var(--verde-escuro);
+  color: var(--branco);
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.botao:hover {
+  background: #193c32;
+}
+
+.botao-pequeno {
+  padding: 8px 13px;
+}
+
+/* Apresentação principal */
+.apresentacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 45px;
+  padding-top: 55px;
+  padding-bottom: 60px;
+}
+
+.etiqueta {
+  color: var(--verde-suave);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  color: var(--verde-escuro);
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 500px;
+  margin-bottom: 18px;
+  font-size: 42px;
+}
+
+.apresentacao-texto > p:not(.etiqueta) {
+  max-width: 460px;
+  margin-bottom: 24px;
+}
+
+.foto-principal {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Cartões dos animais */
+.secao {
+  padding: 55px 0;
+}
+
+.animais {
+  background: var(--branco);
+}
+
+.titulo-secao {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: 30px;
+}
+
+.link {
+  color: var(--verde-escuro);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.lista-animais {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cartao-animal {
+  display: block;
+  overflow: hidden;
+  border: 1px solid #e8e7e1;
+  border-radius: 7px;
+  background: var(--branco);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cartao-animal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(37, 79, 67, 0.12);
+}
+
+.cartao-animal img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.cartao-texto {
+  padding: 14px 16px;
+}
+
+.cartao-texto h3 {
+  margin-bottom: 4px;
+  color: var(--verde-escuro);
+  font-size: 19px;
+}
+
+.cartao-texto p,
+.observacao {
+  margin-bottom: 0;
+  color: #687069;
+  font-size: 13px;
+}
+
+.observacao {
+  margin-top: 15px;
+  text-align: right;
+  font-size: 11px;
+}
+
+/* Etapas da adoção */
+.adocao-conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  column-gap: 55px;
+  row-gap: 22px;
+  align-items: start;
+}
+
+.adocao-conteudo > div > p:not(.etiqueta) {
+  max-width: 390px;
+  margin-top: 15px;
+}
+
+.etapas {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.etapas li {
+  padding: 0 0 14px 5px;
+}
+
+.etapas li::marker {
+  color: var(--laranja);
+  font-weight: bold;
+}
+
+.etapas strong,
+.etapas span {
+  display: block;
+}
+
+.etapas strong {
+  color: var(--verde-escuro);
+}
+
+.etapas span {
+  font-size: 14px;
+}
+
+.adocao-conteudo > .link {
+  grid-column: 2;
+}
+
+/* Chamada e rodapé */
+.chamada {
+  padding: 35px 0;
+  background: var(--verde-suave);
+}
+
+.chamada-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.chamada .etiqueta,
+.chamada h2 {
+  color: var(--branco);
+}
+
+.chamada h2 {
+  font-size: 28px;
+}
+
+.botao-claro {
+  background: var(--branco);
+  color: var(--verde-escuro);
+}
+
+.botao-claro:hover {
+  background: var(--creme);
+}
+
+.rodape {
+  padding: 24px 0;
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.rodape-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo-claro {
+  color: var(--branco);
+}
+
+.rodape p,
+.rodape span {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 700px) {
+  .cabecalho-conteudo {
+    padding: 14px 0;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .apresentacao {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-top: 40px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  .foto-principal {
+    height: 270px;
+  }
+
+  .lista-animais {
+    grid-template-columns: 1fr;
+  }
+
+  .cartao-animal img {
+    height: 250px;
+  }
+
+  .adocao-conteudo {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .adocao-conteudo > .link {
+    grid-column: 1;
+  }
+
+  .chamada-conteudo,
+  .rodape-conteudo {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/*Css do formulario */
+
+#form-adocao {
+  background: var(--branco);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #e8e7e1;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+#form-adocao p {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#form-adocao p:has(input[type="radio"]) {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+#form-adocao input[type="text"],
+#form-adocao input[type="email"],
+#form-adocao input[type="tel"],
+#form-adocao select,
+#form-adocao textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit; 
+  font-size: 15px;
+  color: var(--grafite);
+  background-color: var(--branco);
+  transition: border-color 0.3s ease; 
+}
+
+#form-adocao input[type="text"]:focus,
+#form-adocao input[type="email"]:focus,
+#form-adocao input[type="tel"]:focus,
+#form-adocao select:focus,
+#form-adocao textarea:focus {
+  outline: none;
+  border-color: var(--verde-suave);
+  box-shadow: 0 0 0 2px rgba(120, 155, 131, 0.2);
+}
+
+#form-adocao textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#form-adocao input[readonly] {
+  background-color: #f9f9f9;
+  color: #777;
+  cursor: not-allowed;
+}
+
+#form-adocao p:has(#cep) {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 15px;
+}
+
+#form-adocao p:has(#bairro) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+@media (max-width: 700px) {
+  #form-adocao {
+    padding: 20px;
+  }
+  
+  #form-adocao p:has(#cep),
+  #form-adocao p:has(#bairro) {
+      grid-template-columns: 1fr; 
+  }
+}
+
+/* Conteúdo das páginas de adoção e cuidados */
+.etapas-adocao {
+  margin-top: 25px;
+  max-width: 750px;
+}
+
+.lista-cuidados {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.lista-cuidados li {
+  margin-bottom: 12px;
+}
+
+.lista-cuidados li::marker {
+  color: var(--verde-suave);
+}
+
+.grade-cuidados {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.item-cuidado {
+  padding: 20px;
+  background: var(--branco);
+  border: 1px solid #e8e7e1;
+  border-radius: 7px;
+}
+
+.item-cuidado h3 {
+  margin-bottom: 8px;
+  color: var(--verde-escuro);
+}
+
+.item-cuidado p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@media (max-width: 700px) {
+  .grade-cuidados {
+    grid-template-columns: 1fr;
+  }
+}
